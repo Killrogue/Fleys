@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" 	 href="assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles_DDF.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
 		<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
@@ -45,23 +44,27 @@
 		</header><!--fin du header-->
 		<main class="container-fluid"><!--début du main-->
 				<div class="row">
-					<div class="col-2 wine_link">
-						<p class="py-2 mb-0 text-center">Nos Chablis</p>
+					<div class="col-2 wine_link list-group" id="list-tab" role="tablist">
+						<button type="button" class="list-group-item list-group-item-action list-group-item-dark active py-2 mb-0 text-center">
+					    Nos Chablis
+					  	</button>
 					<?php
 						include('assets/php/inc_bdd.php');
 						$sql = "SELECT * FROM vin";
 						$requete = $db -> query($sql);
 
 						while ($result = $requete -> fetch()) { ?>
-						<div class="pt-2">
+						<div type="button" class="list-group-item  list-group-item-action pt-2  ">
 							<img class="wine_glass" <?= ($result['id']==$_GET['id']) ? "style= 'transform: rotate(45deg);'" : ""; ?> src="<?= $result['lien_img']?>">
-							<a href="description_vins.php?id=<?= $result['id'] ?>"><?= $result['nom_court'] ?></a>
+							<a href="description_vins.php?id=<?= $result['id'] ?>" class="a-actu"><?= $result['nom_court'] ?></a>
 						</div>
 
 
 						<?php
 							if ($result['id'] == 3) { ?>
-								<p class="py-2 mb-0 mt-3 text-center">Nos Chablis Premier Cru</p>
+								<button type="button" class="list-group-item list-group-item-action list-group-item-dark active py-2 mb-0 mt-3 text-center">
+							    Nos Chablis Premier Cru
+							  	</button>
 						<?php
 							}
 						} 
@@ -81,23 +84,24 @@
 						$nom = strip_tags($result['nom']);
 					?>
 
-					<div class=" col-2 descr text-light">
-						<p><i class="fab fa-vine"></i><br><?= $result['description']?></p>
-						<p><i class="fas fa-tint"></i><br><?= $result['vinification']?></p>
-						<p><i class="fab fa-untappd"></i><br><?= $result['degustation']?></p>
+					<div class="offset-1 col-2 descr list-group">
+						<p class="list-group-item list-descr"><i class="fab fa-untappd"></i><br><?= $result['description']?></p>
+						<p class="list-group-item list-descr"><i class="fas fa-tint"></i><br><?= $result['vinification']?></p>
+						<p class="list-group-item list-descr"><i class="fas fa-bars"></i><br><?= $result['degustation']?></p>
 					</div>
 					<div class=" col-3 ">
 						<img class="img-fluid btls" src="<?= $result['lien_img']?>" alt="Chablis 2016">
 					</div>
-					<div class=" offset-1 col-2 descr text-light">
-						<h2 class="text-center my-5 titledescr pb-4"><?= $nom ?></h2>
-						<p class="text-center mt-4"><span class="pr-3"><i class="fas fa-dna"></i></span><?= $result['cepage']?></p>
-						<p  class="text-center"><span class="pr-3"><i class="fas fa-compass"></i></span><?= $result['exposition']?></p>
-						<p  class="text-center"><span class="pr-3"><i class="fas fa-birthday-cake"></i></span><?= $result['age_des_vignes']?></p>
-						<p  class="text-center"><span class="pr-3"><i class="fas fa-expand"></i></span><?= $result['superficie']?></p>
-						<p  class="text-center"><span class="pr-3"><i class="fas fa-chart-line"></i></span><?= $result['rendement']?></p>
-						<p  class="text-center"><span class="pr-3"><i class="fas fa-sort-amount-up"></i></span><?= $result['production']?></p>
-						<p  class="text-center"><span class="pr-3"><i class="fab fa-envira"></i></span><?= $result['vendanges']?></p>
+					<div class="col-1 p-0">
+						<img src="<?= $result['medailles']?>" class="descr img-fluide logo-medaille">
+					</div>
+					<div class=" col-2 descr list-group">
+						<h2 class="text-center my-5 titledescr pb-4 list-group-item list-descr"><?= $nom ?></h2>
+						<p class="text-center mt-4 list-group-item list-descr "><span class="pr-3"><i class="fas fa-dna"></i></span><?= $result['cepage']?></p>
+						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fas fa-birthday-cake"></i></span><?= $result['age_des_vignes']?></p>
+						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fas fa-expand"></i></span><?= $result['superficie']?></p>
+						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fas fa-sort-amount-up"></i></span><?= $result['production']?></p>
+						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fab fa-envira"></i></span><?= $result['vendanges']?></p>
 
 					 	<?php	
 					 	}else{
