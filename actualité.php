@@ -2,22 +2,17 @@
 	<html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" 	 href="assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/styles_DDF.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
 		<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
-		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-		<script type="text/javascript" src="assets/js/script.js"></script>
 		<script defer src="assets/js/fontawesome-all.js"></script>
 	</head>
-	<body class="bg-raisin2">
+	<body >
 		<header class="container-fluid  px-0"><!--début du header-->
 			<nav class="navbar navbar-expand-lg bg-nav fixed-top">
-			 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-   					<i class="fas fa-bars burger"></i>
+			 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   					<span class="navbar-toggler-icon"></span>
   				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav mx-auto">
@@ -43,68 +38,80 @@
 				</div>
 			</nav>
 		</header><!--fin du header-->
-		<main class="container-fluid mb-5"><!--début du main-->
+		<main class="container-fluid mb-3 news"><!--début du main-->
 			<div class="container">
-				<div class="row px-0 ">
-					<div class="col-12 news">
-						<div class="card card-css">
-							<h3 class="card-header bg-gold mb-3">Dernière actualité</h3>
-							<img class="card-img-top px-4" src="assets/images/raisin.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Bonne année 2018</h5>
-								<p class="card-text">Bonne année 2018 à tous !</p>
-								<a href="descritpion_actualité.php">En lire plus</a>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">20/03/2018</small>
-							</div>
-						</div>
-					</div>
-					<div class="card-deck mt-3 ">
-						<div class="card card-css">
-							<img class="card-img-top" src="assets/images/raisin.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Bonne année 2018</h5>
-								<p class="card-text">Bonne année 2018 à tous !</p>
-								<a href="descritpion_actualité.php">En lire plus</a>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">20/03/2018</small>
-							</div>
-						</div>
-						<div class="card card-css">
-							<img class="card-img-top" src="assets/images/raisin.jpg" alt="Card image cap">
-							<div class="card-body">
-								<h5 class="card-title">Bonne année 2018</h5>
-								<p class="card-text">Bonne année 2018 à tous !</p>
-								<a href="descritpion_actualité.php">En lire plus</a>
-							</div>
-							<div class="card-footer">
-								<small class="text-muted">20/03/2018</small>
+				<div class="row">
+					<div class="col-12 mb-4 first-news">
+						<div class="card">
+							<img class="card-img-top first-img-news" src="assets/images/firstnews.jpg" alt="Card image cap">
+							<div class="middle">
+								<p class="middle-first-texte">Les actualités du château de fleys</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>	
+				<div class="card-deck">
+					<div class="card first-news">
+						<img class="card-img-top all-img-news" src="assets/images/vigne3.jpg" alt="Card image cap">
+						<div class="middle-all">
+							<p class="middle-texte">Bonne année 2018 </p>
+						</div>
+						<div class="card-body">
+							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-between">
+     						<small class="text-muted">Last updated 3 mins ago</small>
+     						<a href="" class="lien-actu">En lire plus</a>
+    					</div>
+					</div>
+					<div class="card first-news">
+						<img class="card-img-top all-img-news" src="assets/images/futs.jpg" alt="Card image cap">
+						<div class="middle-all">
+							<p class="middle-texte">Le Grand Tasting approche !</p>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-between">
+     						<small class="text-muted ">Last updated 3 mins ago</small>
+     						<a href="" class="lien-actu">En lire plus</a>
+    					</div>					
+    				</div>
+					<div class="card first-news">
+						<img class="card-img-top all-img-news" src="assets/images/vigne3.jpg" alt="Card image cap">
+						<div class="middle-all">
+							<p class="middle-texte">GRAND TASTING 2017 </p>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+						</div>
+						<div class="card-footer d-flex justify-content-between">
+     						<small class="text-muted ">Last updated 3 mins ago</small>
+     						<a href="" class="lien-actu">En lire plus</a>
+    					</div>					
+    				</div>
+				</div>
+			</div>
 		</main><!--fin du main-->
 		<section class="container-fluid px-0 link"><!--début langue et réseaux sociaux-->
-			<nav class="navbar navbar-expand bg-nav-2 ">
+			<nav class="navbar navbar-expand-lg bg-nav-2 ">
 				<div>
 					<img src="assets/images/fr-FR.png" alt="Français">
 					<i class="fas fa-caret-right text-light"></i>
 					<img src="assets/images/en-GB.png" alt="English">
-					<a href="mentions_legales.php" class="ml-5">Mentions légales</a>
 				</div>
 			  	<div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav ml-auto">
 				      <li class="nav-item mr-2">
-				        <a class="nav-link " href="https://fr-fr.facebook.com/chateaudefleys.chablis.9" title="Rejoindre notre page Facebook"><i class="fab fa-facebook-f"></i><span class="d-md-inline d-none">&nbsp;&nbsp;FACEBOOK</span></a>
+				        <a class="nav-link " href="https://fr-fr.facebook.com/chateaudefleys.chablis.9" title="Rejoindre notre page Facebook"><i class="fab fa-facebook-f"></i>&nbsp;FACEBOOK</a>
 				      </li>
 				      <li class="nav-item mx-2">
-				        <a class="nav-link" href="https://twitter.com/chateaudefleys" title="Rejoindre notre compte Twitter"><i class="fab fa-twitter"></i><span class="d-md-inline d-none">&nbsp;&nbsp;TWITTER</span></a>
+				        <a class="nav-link" href="https://twitter.com/chateaudefleys" title="Rejoindre notre compte Twitter"><i class="fab fa-twitter"></i>&nbsp;TWITTER</a>
 				      </li>
 				      <li class="nav-item ml-2">
-				        <a class="nav-link" href="https://www.instagram.com/chateau_de_fleys/" title="Rejoindre notre page Instagram"><i class="fab fa-instagram"></i><span class="d-md-inline d-none">&nbsp;&nbsp;INSTAGRAM</span></a>
+				        <a class="nav-link" href="https://www.instagram.com/chateau_de_fleys/" title="Rejoindre notre page Instagram"><i class="fab fa-instagram"></i>&nbsp;INSTAGRAM</a>
 				      </li>
 				    </ul>
 			  	</div>
