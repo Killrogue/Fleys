@@ -1,7 +1,3 @@
-<?php 
-
-session_start()
-?>
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -47,17 +43,36 @@ session_start()
 				</div>
 			</nav>
 		</header><!--fin du header-->
-		
-		<?php  
-
-		if (isset($_SESSION) AND !empty($_SESSION['id'])){
-			include_once('main_accueil_connecte.php');
-		}else{
-			include_once('main_accueil_deconnecte.php');
-		}
-
-		?>
-
+		<main class="container-fluid">
+			<section class="formInscription p-3">
+				<form id="inscription">
+					<div class="text-right">
+						<label>Nom : </label>
+						<input type="text" name="nom" placeholder="nom" required>
+					</div>
+					<div class="text-right">
+						<label>Email : </label>
+						<input type="text" name="mail" placeholder="mail" required>
+					</div>
+					<div class="text-right">
+						<label>Confirmation Email : </label>
+						<input type="text" name="mail2" placeholder="confirmation mail" required>
+					</div>
+					<div class="text-right">
+						<label>Mot de passe : </label>
+						<input type="password" name="mot_de_passe" placeholder="mot de passe" required>
+					</div>
+					<div class="text-right mb-2">
+						<label>Confirmation Mot de passe : </label>
+						<input type="password" name="mot_de_passe2" placeholder="confirmation mot de passe" required>
+					</div>
+					<a class="ml-5 " style="margin-left: 10px" href="connection.php">Aller vers Connection</a>
+					<input class="ml-5" type="submit" name="submit" value="Valider">
+					
+					<p id="feedback"></p>
+				</form>
+			</section>
+		</main>
 		<section class="container-fluid px-0 link-ex"><!--début langue et réseaux sociaux-->
 			<nav class="navbar navbar-expand nav-bottom">
 				<div>

@@ -184,6 +184,33 @@ nav button:active{
 	position: absolute; bottom: 0;
 }
 
+.admin{
+	background-color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: 12vh;
+	left: 82vw;
+	width: 16%;
+	border-radius:1em;
+}
+
+.formConnection{
+	background-color: rgba(0, 0, 0, 0.8);
+	color: rgb(188, 144, 9);
+	top: 40vh;
+	left: 42vw;
+	position: absolute;
+	border-radius:1em;
+}
+
+.formInscription{
+	background-color: rgba(0, 0, 0, 0.8);
+	color: rgb(188, 144, 9);
+	top: 39vh;
+	left: 38vw;
+	position: absolute;
+	border-radius:1em;
+}
+
 @media screen and (max-width: 576px){
 	body{
 		font-size: 12px;

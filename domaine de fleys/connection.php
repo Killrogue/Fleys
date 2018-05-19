@@ -1,7 +1,3 @@
-<?php 
-
-session_start()
-?>
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -47,17 +43,24 @@ session_start()
 				</div>
 			</nav>
 		</header><!--fin du header-->
-		
-		<?php  
-
-		if (isset($_SESSION) AND !empty($_SESSION['id'])){
-			include_once('main_accueil_connecte.php');
-		}else{
-			include_once('main_accueil_deconnecte.php');
-		}
-
-		?>
-
+		<main class="container-fluid">
+			<section class="formConnection p-3">
+				<form id="connexion">
+					<div>
+						<label class="pl-5 ml-1">Email : </label>
+						<input type="email" name="mail" placeholder="Entrez votre email" required>
+					</div>
+					<div class="pt-3">
+						<label>Mot de passe : </label>
+						<input type="password" name="mot_de_passe" placeholder="Entrez votre mot de passe" required>
+					</div>
+					<br>
+					<input class="ml-3" type="submit" name="submit" value="Connexion">
+					<a style="margin-left: 10px" href="oubli.php">Mot de passe oublié ?</a>
+					<p id="feedback"></p>
+				</form>
+			</section>
+		</main>
 		<section class="container-fluid px-0 link-ex"><!--début langue et réseaux sociaux-->
 			<nav class="navbar navbar-expand nav-bottom">
 				<div>
