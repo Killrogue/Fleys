@@ -1,3 +1,7 @@
+<?php 
+
+session_start()
+?>
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -45,6 +49,10 @@
 		</header><!--fin du header-->
 		<main class="container-fluid">
 			<section class="formInscription p-3">
+<?php  
+
+			if (isset($_SESSION) AND !empty($_SESSION['niveau_autorisation']) AND $_SESSION['niveau_autorisation'] == 99){
+?>
 				<form id="inscription">
 					<div class="text-right">
 						<label>Nom : </label>
@@ -71,6 +79,14 @@
 					
 					<p id="feedback"></p>
 				</form>
+<?php
+			}else{
+?>
+				<p>Vous ne pouvez pas acceder au formulaire d'inscription !</p>
+<?php
+			}
+?>
+				
 			</section>
 		</main>
 		<section class="container-fluid px-0 link-ex"><!--début langue et réseaux sociaux-->
