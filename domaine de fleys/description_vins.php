@@ -44,7 +44,7 @@
 		</header><!--fin du header-->
 		<main class="container-fluid"><!--début du main-->
 				<div class="row">
-					<div class="col-2 wine_link list-group d-none d-sm-block" id="list-tab" role="tablist">
+					<div class="col-2 wine_link list-group d-none d-lg-block mr-lg-5" id="list-tab" role="tablist">
 						<button type="button" class="list-group-item list-group-item-action list-group-item-dark active py-2 mb-0 text-center">
 					    Nos Chablis
 					  	</button>
@@ -54,7 +54,7 @@
 						$requete = $db -> query($sql);
 
 						while ($result = $requete -> fetch()) { ?>
-						<div type="button" class="list-group-item  list-group-item-action pt-2 d-none d-sm-block ">
+						<div type="button" class="list-group-item  list-group-item-action pt-2 d-none d-lg-block ">
 							<img class="wine_glass" <?= ($result['id']==$_GET['id']) ? "style= 'transform: rotate(45deg);'" : ""; ?> src="<?= $result['lien_img']?>">
 							<a href="description_vins.php?id=<?= $result['id'] ?>" class="a-actu"><?= $result['nom_court'] ?></a>
 						</div>
@@ -62,7 +62,7 @@
 
 						<?php
 							if ($result['id'] == 3) { ?>
-								<button type="button" class="list-group-item list-group-item-action list-group-item-dark active py-2 mb-0 mt-3 text-center d-none d-sm-block">
+								<button type="button" class="list-group-item list-group-item-action list-group-item-dark active py-2 mb-0 mt-3 text-center d-none d-lg-block">
 							    Nos Chablis Premier Cru
 							  	</button>
 						<?php
@@ -83,26 +83,28 @@
 					if (isset($_GET['id']) AND !empty($_GET['id'])) {
 						$nom = strip_tags($result['nom']);
 					?>
-
-					<div class="offset-xl-1 col-sm-2 descr list-group order-2  order-sm-1 col-12">
+					<div class="d-block d-lg-none btn-return">
+						<a href="nos_vins.php" class="btn btn-light btn-lg " role="button" aria-pressed="true">Retour</a>
+					</div>
+					<div class="offset-xl-1 col-lg-3 col-xl-2 col-12 descr order-2 order-lg-1 mb-3 mb-lg-0 descr1 ">
 						<p class="list-group-item list-descr"><i class="fab fa-untappd"></i><br><?= $result['description']?></p>
 						<p class="list-group-item list-descr"><i class="fas fa-tint"></i><br><?= $result['vinification']?></p>
 						<p class="list-group-item list-descr"><i class="fas fa-bars"></i><br><?= $result['degustation']?></p>
 					</div>
-					<div class=" col-sm-3 order-1 order-sm-2 col-12">
-						<img class="img-fluid btls" src="<?= $result['lien_img']?>" alt="Chablis 2016">
+					<div class=" col-lg-4 col-xl-3 col-12 order-1 order-lg-2 text-center ">
+						<img class=" btls " src="<?= $result['lien_img']?>" alt="Chablis 2016">
 					</div>
-					<div class="col-sm-1 p-0 order-3 order-sm-3 col-12">
-						<img src="<?= $result['medailles']?>" class="descr img-fluide logo-medaille">
+					<div class=" col-lg-1 col-xl-1 p-0 col-12 d-xl-block d-none order-md-3">
+						<img src="<?= $result['medailles']?>" class=" descr img-fluide logo-medaille">
 					</div>
-					<div class=" col-sm-2 descr list-group order-4 order-sm-4 col-12 ">
-						<h2 class="text-center my-5 titledescr pb-4 list-group-item list-descr"><?= $nom ?></h2>
+					<div class=" col-lg-2 col-xl-2 descr list-group col-12 d-lg-block d-none order-lg-4 descr2">
+						<h2 class="text-center mb-5 mt-1 titledescr pb-4 list-group-item list-descr"><?= $nom ?></h2>
 						<p class="text-center mt-4 list-group-item list-descr "><span class="pr-3"><i class="fas fa-dna"></i></span><?= $result['cepage']?></p>
 						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fas fa-birthday-cake"></i></span><?= $result['age_des_vignes']?></p>
 						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fas fa-expand"></i></span><?= $result['superficie']?></p>
 						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fas fa-sort-amount-up"></i></span><?= $result['production']?></p>
 						<p  class="text-center list-group-item list-descr "><span class="pr-3"><i class="fab fa-envira"></i></span><?= $result['vendanges']?></p>
-
+					</div>
 					 	<?php	
 					 	}else{
 					 		echo "Il n'y a pas d'id";
@@ -111,10 +113,9 @@
 					
 
 					</div>
-				</div>
 		</main><!--fin du main-->
-		<section class="container-fluid px-0 link"><!--début langue et réseaux sociaux-->
-			<nav class="navbar navbar-expand bg-nav-2  nav-bottom"">
+		<section class="container-fluid px-0 link mt-lg-5"><!--début langue et réseaux sociaux-->
+			<nav class="navbar navbar-expand bg-nav-2 nav-bottom-foot">
 				<div>
 					<img src="assets/images/fr-FR.png" alt="Français">
 					<i class="fas fa-caret-right text-light"></i>
@@ -135,7 +136,7 @@
 			  	</div>
 			</nav>
 		</section><!--fin langue et réseaux sociaux-->
-		<footer class="container-fluid footer-accueil"><!--début du footer-->
+		<footer class="container-fluid footer-vin"><!--début du footer-->
 			<p class="mb-0 text-light text-center pb-2">L'abus d’alcool est dangereux pour la santé.</p>
 		</footer><!--fin du footer-->
 	</body>

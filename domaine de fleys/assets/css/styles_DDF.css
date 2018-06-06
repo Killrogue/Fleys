@@ -557,7 +557,6 @@ iframe{
 
 position: relative;
 top: 24vh;
-right: -4vw;
 height: 36em;
 }
 .descr{
@@ -592,21 +591,157 @@ height: 36em;
 .wine_glass{
 	width: 1.8em;
 }
-.list-group-item{
-	max-width: 12.5em;
-	border-radius: 0rem !important;
-}
 .a-actu{
 	color: black !important;
-}
-.list-descr{
-	max-width: 25em;
 }
 .title-descr{
 	max-height: 1em;
 }
 .logo-medaille{
 	height: 7em;
+}
+@media screen and (max-width: 576px){
+	
+	.nav-bottom-foot{
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	}
+	.footer-vin{
+	position: absolute;
+	}
+	.btls{
+	position: relative;
+	top: 8vh;
+	height: 36em;
+	}
+	.descr{
+	margin-top: 6em;
+	}
+	.btn-return{
+	position: absolute;
+	top: 16vh;
+	z-index: 888;
+	}
+	.bg-wood{
+	background : url("../images/mur-droit.jpg")!important;
+	}
+	.descr p{
+	font-size: 1.3em;
+	}
+}
+@media screen and (min-width: 576px ) and (max-width: 768px){
+	
+	.nav-bottom-foot{
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100%;
+	}
+	.footer-vin{
+		position: absolute;
+	}
+	.btn-return{
+	position: absolute;
+	top: 16vh;
+	z-index: 888;
+	}
+	.bg-wood{
+	background : url("../images/mur-droit.jpg")!important;
+	}
+	.btls{
+	position: relative;
+	top: 8vh;
+	height: 36em;
+	}
+	.descr p{
+	font-size: 1.3em;
+	}
+
+
+}
+@media screen and (min-width: 768px ) and (max-width: 992px){
+	
+	.nav-bottom-foot{
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100%;
+	}
+	.footer-vin{
+		position: absolute;
+	}
+	.btn-return{
+	position: absolute;
+	top: 16vh;
+	z-index: 888;
+	}
+	.bg-wood{
+	background : url("../images/mur-droit.jpg")!important;
+	}
+	.btls{
+	position: relative;
+	top: 8vh;
+	height: 36em;
+	}
+	.descr p{
+	font-size: 1.3em;
+	}
+}
+@media screen and (min-width: 992px ) and (max-width: 1200px){
+	
+	.nav-bottom-foot{
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100%;
+	}
+	.footer-vin{
+	position: absolute;
+	}
+	.bg-wood{
+	background : url("../images/mur-droit.jpg") !important;
+	}
+	.descr{
+	margin-top: 12em;
+	}
+}
+@media screen and (min-width: 1200px ) and (max-width: 1380px) {
+
+	.descr p{
+	font-size: 1em;
+	}
+	.nav-bottom-foot{
+		background-color: rgba(0, 0, 0, 0.8);
+		width: 100%;
+	}
+	.logo-medaille{
+		display: none;
+	}
+	.descr1{
+		min-width: 17em;
+		margin-left: 0em;
+	}
+	.descr2{
+		min-width: 12em;
+	}
+	.descr{
+		margin-top: 14em;
+	}
+	.btls{
+		height: 32em;
+		top: 37vh;
+	}
+	.footer-vin{
+		position: absolute;
+
+	}
+	.bg-wood{
+	background : url("../images/mur-droit.jpg") !important;
+	}
+	.wine_link{
+		margin-top: 21em !important;
+	}
+	
+
+}
+@media screen and (min-width: 1380px ){
+	.nav-bottom-foot{
+		margin-top: 8rem;
+	}
 }
 /**********************/
 /****Fin info vins****/
@@ -692,3 +827,16 @@ height: 36em;
 /**********************/
 /****Fin actualité****/
 /********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
