@@ -89,7 +89,9 @@
 					</form>
 				</div>
 				<div class="col-md-6 col-lg-4 col-12 pt-3 pt-md-0">
-					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.2384550681923!2d3.8540100160240183!3d47.815596379199036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ee6927a9d9b571%3A0x5f6ac1fa6cac4a93!2sDomaine+du+Ch%C3%A2teau+de+Fleys+EARL!5e0!3m2!1sfr!2sfr!4v1523455217692" frameborder="0" style="border:0 " allowfullscreen></iframe>
+					<div class="card">
+						<iframe class="map card-img-top" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.2384550681923!2d3.8540100160240183!3d47.815596379199036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ee6927a9d9b571%3A0x5f6ac1fa6cac4a93!2sDomaine+du+Ch%C3%A2teau+de+Fleys+EARL!5e0!3m2!1sfr!2sfr!4v1523455217692" frameborder="0" style="border:0 " allowfullscreen></iframe>
+					</div>
 					<div class="bg-black text-light p-2 mt-3">
 						<h2 class="text-center" >Nos coordonées</h2>
 						<p><span class="pr-2"><i class="fas fa-rotate-90 fa-phone"></i></span>+ 33 3-86-42-47-70</p>

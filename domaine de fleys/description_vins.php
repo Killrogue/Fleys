@@ -84,7 +84,7 @@
 						$nom = strip_tags($result['nom']);
 					?>
 
-					<div class="offset-1 col-sm-2 descr list-group order-2  order-sm-1 col-12">
+					<div class="offset-xl-1 col-sm-2 descr list-group order-2  order-sm-1 col-12">
 						<p class="list-group-item list-descr"><i class="fab fa-untappd"></i><br><?= $result['description']?></p>
 						<p class="list-group-item list-descr"><i class="fas fa-tint"></i><br><?= $result['vinification']?></p>
 						<p class="list-group-item list-descr"><i class="fas fa-bars"></i><br><?= $result['degustation']?></p>

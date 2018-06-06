@@ -410,7 +410,6 @@ h1[class*="histo-title"]{
 	position: absolute;
 	top: 23vh;
 	right: 2vw;
-	z-index: 9955995;
 	color: rgb(34, 139, 34) !important;
 	font-size: 0.8em;
 	line-height: 1em;
@@ -693,16 +692,3 @@ height: 36em;
 /**********************/
 /****Fin actualité****/
 /********************/
-
-
-
-
-
-
-
-
-
-
-
-
-
