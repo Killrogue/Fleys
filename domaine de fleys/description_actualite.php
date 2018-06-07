@@ -42,31 +42,30 @@
 		<main class="container-fluid mb-3 news"><!--début du main-->
 			<div class="container">
 				<div class="row">
+					<?php
+						include('assets/php/inc_bdd.php');
+						$sql = "SELECT * FROM news WHERE id = :id";
+						$requete = $db -> prepare($sql);
+						$requete -> bindValue(':id', $_GET['id'], PDO::PARAM_INT);
+						$requete -> execute();
+						$result = $requete -> fetch();
+
+						if (isset($_GET['id']) AND !empty($_GET['id'])) {
+
+					?>	
 					<div class="offset-1 col-10 mb-4 first-news">
-						<img class="first-img-news" src="assets/images/firstnews.jpg" alt="Card image cap">
+						<img class="first-img-news" src="<?= $result['picture']?>" alt="Card image cap">
 					</div>
 					<div class="col-12">
 						<h1></h1>
 						<p></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p><?= $result['content']?></p>
 					</div>
+					<?php	
+					 	}else{
+					 		echo "Il n'y a pas d'id";
+					 	}
+					?>
 				</div>
 			</div>
 		</main><!--fin du main-->

@@ -42,63 +42,67 @@
 		<main class="container-fluid mb-3 news"><!--début du main-->
 			<div class="container">
 				<div class="row">
+					<?php 
+
+					include('assets/php/inc_bdd.php');
+
+					$sql = "SELECT * FROM news ORDER BY date DESC limit 1";
+
+					$requete = $db -> query($sql);
+					$result = $requete -> fetch()
+					
+						
+					?>
 					<div class="col-12 mb-4 first-news">
 						<div class="card">
-							<a href="description_actualite.php"><img class="card-img-top first-img-news" src="assets/images/firstnews.jpg" alt="Card image cap"></a>
+							<a href="description_actualite.php?id=<?= $result['id']?>"><img class="card-img-top first-img-news" src="assets/images/firstnews.jpg" alt="Card image cap"></a>
 							<div class="middle">
-								<p class="middle-first-texte">Les actualités du château de fleys</p>
+								<p class="middle-first-texte text-center"><?= $result['title']?></p>
 							</div>
 							<div class="card-footer d-flex justify-content-between">
-	     						<small class="text-muted">Last updated 3 mins ago</small>
-	     						<a href="" class="lien-actu">En lire plus</a>
+	     						<small class="text-muted"><?= (date("d-m-Y", strtotime($result['date'])) )?></small>
+	     						<a href="description_actualite.php?id=<?= $result['id']?>" class="lien-actu">En lire plus</a>
 	    					</div>
     					</div>
 					</div>
+				</div>	
+			</div>	
+		<div class="container">
+			<div class="row justify-content-center">			
+						<?php 
+							$sql = "SELECT * FROM news WHERE date > 1 ORDER BY date DESC";
+
+								$requete = $db -> query($sql);
+								while ($result = $requete -> fetch()) { 
+						?>	
+						<div class="card first-news col-3 mb-5 px-0 mx-4 ">
+							<a href="description_actualite.php?id=<?= $result['id']?>"><img class="card-img-top all-img-news" src="<?= $result['picture']?>" alt="Card image cap"></a>
+							<div class="middle-all">
+								<p class="middle-texte"><?= $result['title']?></p>
+							</div>
+							<div class="card-body bg-white">
+								<p class="card-text">
+									<?php 
+										$description = substr($result['content'], 0, 70);
+										$last_space = strrpos($description, " ");
+										$description = substr($description, 0, $last_space)."...";
+
+									 ?>
+									 <?= $description ?>
+									
+										
+								</p>
+							</div>
+							<div class="card-footer d-flex justify-content-between">
+	     						<small class="text-muted"><?= (date("d-m-Y", strtotime($result['date'])) )?></small>
+	     						<a href="" class="lien-actu">En lire plus</a>
+	    					</div>
+						</div>
+						<?php  
+						}
+						?>
 				</div>
-				<div class="card-deck">
-					<div class="card first-news">
-						<a href="description_actualite.php"><img class="card-img-top all-img-news" src="assets/images/vigne3.jpg" alt="Card image cap"></a>
-						<div class="middle-all">
-							<p class="middle-texte">Bonne année 2018 </p>
-						</div>
-						<div class="card-body">
-							<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer d-flex justify-content-between">
-     						<small class="text-muted">Last updated 3 mins ago</small>
-     						<a href="" class="lien-actu">En lire plus</a>
-    					</div>
-					</div>
-					<div class="card first-news">
-						<a href="description_actualite.php"><img class="card-img-top all-img-news" src="assets/images/futs.jpg" alt="Card image cap"></a>
-						<div class="middle-all">
-							<p class="middle-texte">Le Grand Tasting approche !</p>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-						</div>
-						<div class="card-footer d-flex justify-content-between">
-     						<small class="text-muted ">Last updated 3 mins ago</small>
-     						<a href="" class="lien-actu">En lire plus</a>
-    					</div>					
-    				</div>
-					<div class="card first-news">
-						<a href="description_actualite.php"><img class="card-img-top all-img-news" src="assets/images/vigne3.jpg" alt="Card image cap"></a>
-						<div class="middle-all">
-							<p class="middle-texte">GRAND TASTING 2017 </p>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-						</div>
-						<div class="card-footer d-flex justify-content-between">
-     						<small class="text-muted ">Last updated 3 mins ago</small>
-     						<a href="" class="lien-actu">En lire plus</a>
-    					</div>					
-    				</div>
-				</div>
-			</div>
+			</div>	
 		</main><!--fin du main-->
 		<section class="container-fluid px-0 link"><!--début langue et réseaux sociaux-->
 			<nav class="navbar navbar-expand-lg bg-nav-2 ">
