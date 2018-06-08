@@ -10,7 +10,7 @@
 			<img class="img-fluid " src="assets/images/chabliscru.png">
 		</button></a>
 		<div class="texte d-none d-lg-block">
-			<h1>Bienvenue au domaine du château de Fleys</h1><i class="fas fa-caret-right text-light arrow"></i>
+			<h1>Bienvenue au Domaine du Château de Fleys</h1><i class="fas fa-caret-right text-light arrow"></i>
 			<h2>La famille Philippon, vigneron depuis 4 générations, vous acceuil au caveau pour une découverte du vignoble et des vins de Chablis.</h2>
 		</div>
 		<div class="d-none d-sm-block">
@@ -30,8 +30,8 @@
 ?>
 
 		<div class="d-none d-sm-block admin ml-auto p-3">
-			<a href="inscription.php">Ajouter un compte d'administration</a><br>
-			<a href="deconnexion.php">Se déconnecter</a>
+			<a href="inscription.php"><button  class="btn btn-outline-warning mb-4 btn-lg">Ajouter un compte administrateur</button></a><br>
+			<a href="deconnexion.php"><button  class="btn btn-outline-danger btn-lg ">Se déconnecter</button></a>
 		</div>
 <?php  	
 	}elseif (isset($_SESSION) AND !empty($_SESSION['niveau_autorisation'])) {

@@ -12,7 +12,7 @@
 	}
 
 	session_destroy();
-	header("Location: http://localhost/PHP/domaine%20de%20fleys/page_d'accueil_DDF.php");
+	header("Location: http://localhost/domaine%20de%20fleys/page_d'accueil_DDF.php");
 	//ATTENTION ! changer le nom du fichier de la page d'accueil selon le vôtre !
 
 ?>

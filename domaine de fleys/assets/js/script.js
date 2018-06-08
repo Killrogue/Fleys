@@ -18,7 +18,7 @@ function connexion(e){
         }
     ).done(function(reponse){
         //$("#feedback").html(reponse);
-        $(location).attr('href',"http://localhost/PHP/domaine%20de%20fleys/page_d'accueil_DDF.php");
+        $(location).attr('href',"http://localhost/domaine%20de%20fleys/page_d'accueil_DDF.php");
     }).fail(function(error){
         console.log(error);
     });    

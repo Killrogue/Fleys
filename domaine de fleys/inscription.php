@@ -54,29 +54,26 @@ session_start()
 			if (isset($_SESSION) AND !empty($_SESSION['niveau_autorisation']) AND $_SESSION['niveau_autorisation'] == 99){
 ?>
 				<form id="inscription">
-					<div class="text-right">
-						<label>Nom : </label>
-						<input type="text" name="nom" placeholder="nom" required>
+					<div class="text-center text-light">
+						<h2>Inscription</h2>
 					</div>
-					<div class="text-right">
-						<label>Email : </label>
-						<input type="text" name="mail" placeholder="mail" required>
+					<div class="form-group row justify-content-center">
+						<input type="text" name="nom" placeholder="nom" required class="form-control w-100 mx-3" id="nom">
 					</div>
-					<div class="text-right">
-						<label>Confirmation Email : </label>
-						<input type="text" name="mail2" placeholder="confirmation mail" required>
+					<div class="form-group row justify-content-center">
+						<input type="text" name="mail" placeholder="mail" required class="form-control w-100 mx-3">
 					</div>
-					<div class="text-right">
-						<label>Mot de passe : </label>
-						<input type="password" name="mot_de_passe" placeholder="mot de passe" required>
+					<div class="form-group row justify-content-center">
+						<input type="text" name="mail2" placeholder="confirmation mail" required class="form-control w-100 mx-3">
 					</div>
-					<div class="text-right mb-2">
-						<label>Confirmation Mot de passe : </label>
-						<input type="password" name="mot_de_passe2" placeholder="confirmation mot de passe" required>
+					<div class="form-group row justify-content-center">
+						<input type="password" name="mot_de_passe" placeholder="mot de passe" required class="form-control w-100 mx-3">
 					</div>
-					<a class="ml-5 " style="margin-left: 10px" href="connection.php">Aller vers Connection</a>
-					<input class="ml-5" type="submit" name="submit" value="Valider">
-					
+					<div class="form-group row justify-content-center">
+						<input type="password" name="mot_de_passe2" placeholder="confirmation mot de passe" required class="form-control w-100 mx-3">
+					</div>
+					<button type="submit" name="submit" class="btn-lg btn btn-outline-warning">Inscription</button>
+					<a href="connection.php"><button  class="btn btn-outline-success btn-sm">Connection</button></a>
 					<p id="feedback"></p>
 				</form>
 <?php

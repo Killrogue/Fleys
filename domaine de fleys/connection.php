@@ -46,17 +46,18 @@
 		<main class="container-fluid">
 			<section class="formConnection p-3">
 				<form id="connexion">
-					<div>
-						<label class="pl-5 ml-1">Email : </label>
-						<input type="email" name="mail" placeholder="Entrez votre email" required>
+					<div class="text-center text-light">
+						<h2>Connection</h2>
 					</div>
-					<div class="pt-3">
-						<label>Mot de passe : </label>
-						<input type="password" name="mot_de_passe" placeholder="Entrez votre mot de passe" required>
+					<div class="form-group row justify-content-center">
+						<input type="email" name="mail" placeholder="Entrez votre email" required class="form-control w-100 mx-3">
+					</div>
+					<div class="form-group row justify-content-center">
+						<input type="password" name="mot_de_passe" placeholder="Entrez votre mot de passe" required class="form-control w-100 mx-3">
 					</div>
 					<br>
-					<input class="ml-3" type="submit" name="submit" value="Connexion">
-					<a style="margin-left: 10px" href="oubli.php">Mot de passe oublié ?</a>
+					<button type="submit" name="submit" class="btn-lg btn btn-outline-success">Connection</button>
+					<a style="margin-left: 10px; color: white" href="oubli.php">Mot de passe oublié ?</a>
 					<p id="feedback"></p>
 				</form>
 			</section>

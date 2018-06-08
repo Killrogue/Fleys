@@ -120,6 +120,7 @@
 					<img src="assets/images/fr-FR.png" alt="Français">
 					<i class="fas fa-caret-right text-light"></i>
 					<img src="assets/images/en-GB.png" alt="English">
+					<a href="mentions_legales.php" class="ml-5">Mentions légales</a>
 				</div>
 			  	<div class="collapse navbar-collapse" id="navbarNav">
 				    <ul class="navbar-nav ml-auto">

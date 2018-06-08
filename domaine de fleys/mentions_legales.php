@@ -44,7 +44,13 @@
 			</nav>
 		</header><!--fin du header-->
 		<main class="container-fluid formulaire"><!--début du main-->
-
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<p class="text-center">Mentions légales</p>
+					</div>
+				</div>
+			</div>
 		</main><!--fin du main-->
 		<section class="container-fluid px-0 link"><!--début langue et réseaux sociaux-->
 			<nav class="navbar navbar-expand bg-nav-2 nav-bottom">
@@ -69,7 +75,7 @@
 			</nav>
 		</section><!--fin langue et réseaux sociaux-->
 		<footer class="container-fluid footer-accueil"><!--début du footer-->
-			<p class="mb-0 text-light text-center pb-2">L'abus d’alcool est dangereux pour la santé.</p>
+			<p class="mb-0 text-center pb-2">L'abus d’alcool est dangereux pour la santé.</p>
 		</footer><!--fin du footer-->
 	</body>
 </html>
